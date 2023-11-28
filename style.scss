@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #e8f0fe;
+}
+
+
+.rak-buku {
+
+    label {
+
+        margin: {
+            top: 20px;
+            bottom: 3px;
+        }
+
+        display: block;
+    }
+
+    #title,
+    #author,
+    #year {
+        font-size: 1rem;
+        background-color: #e8f0fe;
+        width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+        padding-block: 10px;
+        padding-inline: 20px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .container-checkbox {
+        align-items: center;
+        display: flex;
+        height: 50px;
+
+        label {
+            margin-right: 10px;
+        }
+
+        input {
+            transform: translateY(8px);
+            width: 20px;
+            height: 20px;
+        }
+
+        input:checked {
+            accent-color: #e8f0fe;
+        }
+    }
+
+    .button-container {
+        text-align: center;
+    }
+
+    button {
+        border-radius: 3px;
+        border: none;
+        color: white;
+        background-color: black;
+        padding-inline: 10px;
+        width: fit-content;
+        height: 35px;
+        transition: 300ms;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    button:hover {
+        transform: translateY(-3px);
+        background-color: gray;
+        color: black;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    #warning {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+.rak-buku,
+.rak-selesai,
+.rak-belum-selesai {
+    background-color: white;
+    border-radius: 3px;
+    margin: 20px;
+    box-shadow: 1px 1px 5px black;
+    padding: 10px;
+
+    .title {
+        font-size: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        text-align: left;
+    }
+}
+
+.rak-belum-selesai {
+    .card-belum {
+        background-color: #e8f0fe;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 20px;
+
+        p:nth-child(3) {
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-right: 5px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            transition: 300ms;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            background-color: gray;
+            color: black;
+        }
+
+    }
+}
+
+.rak-selesai {
+    .card-selesai {
+        background-color: #e8f0fe;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 20px;
+
+        p:nth-child(3) {
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-right: 5px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            transition: 300ms;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            background-color: gray;
+            color: black;
+        }
+    }
+}
+
+// breakdown media query
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rak-buku {
+
+        .button-container {
+            text-align: center;
+
+            button {
+                width: fit-content;
+                padding-inline: 20px;
+            }
+        }
+    }
+
+    .rak-belum-selesai,
+    .rak-selesai {
+        .title {
+            text-align: left;
+        }
+    }
+
+
+    .rak-buku,
+    .rak-selesai,
+    .rak-belum-selesai {
+        width: 50%;
+    }
+}
